@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div align="left">
+    <div style="visibility: hidden;">
+        basic-knowledge-of-maven
+    </div>
+
+    <hr/>
+    <div id="introductionToMaven">
+        <h2>
+            Introduction to Maven
+        </h2>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven, a&nbsp;Java project management tool for building projects, dependency&nbsp;management, and
+            project information management.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Is the Apache organization&#39;s open source project.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven&#39;s core functionality is a building tool with cross-platform features that help us automate
+            to building and provide a complete set of optimized lifecycle models and the basic components / plugins
+            needed to build the task.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven also is a dependency on management tools and project information management tools so that
+            developers can better manage dependencies and avoid project information and other issues.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven also provides a set of standard rules to reduce the differences between different projects.
+        </p>
+
+        <p>
+            &nbsp;
+        </p>
+    </div>
+
+    <div id="mavenFeatures">
+        <h2>
+            Maven features
+        </h2>
+
+        <div id="mavenPromise">
+            <h3 style="margin-left: 40px;">
+                Maven standard rules
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven is a &quot;promise better than configuration&quot; tool, as long as the compliance with
+                Maven&#39;s rules, then only a small amount of configuration, Maven will be able to help you complete
+                most of the work you need.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenBuilds">
+            <h3 style="margin-left: 40px;">
+                Maven builds
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven unifies the stage of project construction, providing a standardized build phase model:
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 1. validate&nbsp;: Verify the correctness of all necessary information for the project
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 2.&nbsp;initialize&nbsp;: Initialize the build state, such as setting properties or creating a
+                directory
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 3. generate-sources,process-sources&nbsp;: process the project source file
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 4. generate-resources,process-resources&nbsp;: process the resource file and copy it to the
+                target directory, waiting for the package
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 5.&nbsp;compile,process-classes&nbsp;: compile the project&#39;s main code to the destination
+                folder
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 6. generate-test-sources,process-test-sources&nbsp;: process the project test source file
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 7.&nbsp;generate-test-resources,process-test-resources : process the project to test the resource
+                file and copy it to the target directory
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 8.&nbsp;test-compile,process-test-classes&nbsp;: compile the project&#39;s test source code to
+                the destination folder
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 9. test : use the project-defined unit test framework for testing
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 10.&nbsp;prepare-package,package&nbsp;: package&nbsp;the compiled main code into the required
+                format &quot;package&quot;
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 11. pre-integration-test,integration-test,post-integration-test&nbsp;: if necessary, deploy the
+                packaged &quot;package&quot; into an environment where you can run an integrated test
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 12.&nbsp;verify : run the defined check step to verify that the &quot;package&quot; is valid or
+                whether it meets the quality criteria
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 13. install : install the &quot;package&quot; into the local repository<sup>[1]</sup> as a
+                dependency on other local projects
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 14. deploy&nbsp;: publish the &quot;package&quot; to the remote repository<sup>[2]</sup> for
+                others to use and share the project
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenManagement">
+            <h3 style="margin-left: 40px;">
+                Maven dependency management and project information management
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; With regard to dependency management, in the current era, almost every Java application will have
+                a third-party open source library dependency, if use the manual management will seriously affect the
+                efficiency of the developer, and because of increased dependence on the increase in more complex.
+                Fortunately, Maven provides an excellent solution that helps developers better manage projects by
+                introducing elements such as &quot;GroupId&quot;, &quot;ArtifactId&quot;, &quot;Version&quot;, &quot;type&quot;,
+                and other elements for Java dependency issues.
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; On the project information management, when developers use third-party open source library, there
+                will always need to view documents, source code and other needs, before using Maven, developers always
+                need to go to the search engines to find this information, but when the use Maven after these
+                information on the project can be unified in the POM<sup>[3]</sup> in the statement, to facilitate the
+                search of other people, with the unified management of project information.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenPOM">
+            <h3 style="margin-left: 40px;">
+                POM
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; POM file is a core content of Maven, which is called &quot;Project Object Model&quot; is the
+                project object model.<br/>
+                &nbsp;&nbsp;It is used to define the basic information of the project, specify how the project to build,
+                declare the project dependency; POM file provides a great advantage of Maven , That is, the project
+                object model can be the greatest degree of independence with the project code, that is, the relationship
+                between the two were decoupled.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenCoordinate">
+            <h3 style="margin-left: 40px;">
+                Maven coordinate system
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven components: refers to the usual project after packaging the completion of some of the jar,
+                war and other documents.
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven&#39;s coordinates system orders for various components, and any component must explicitly
+                define its own unique coordinates; a set of Maven coordinates is defined by the following set of
+                elements :
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; groupId : defines the actual project under which the current Maven project belongs
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; artifactId : define a Maven module / project in the actual project, recommend using groupId as
+                the artifactId prefix
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; version : defining the version of the Maven module / project, Maven defines a complete set of
+                version specifications
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; packaging : define how the Maven module / project is packaged
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; classifier : help to define some of the ancillary components that correspond to the main
+                component0
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven repository is based on Maven&#39;s coordinate system
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenRepository">
+            <h3 style="margin-left: 40px;">
+                Maven repository
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Because Maven&#39;s coordinate mechanism, any Maven project in the same way to use any &quot;components&quot;;
+                on this basis, Maven can be unified in a certain location to store all Maven project sharing &quot;components&quot;,
+                that is, the repository; because the repository, so Maven Items no longer need to store their dependent
+                &quot;components&quot;, but in turn only need to declare these dependent coordinates, when needed, Maven
+                will automatically find the warehouse &quot;component&quot; coordinates and use them.
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; There are two types of repository, local repository and remote repository. When Maven looks for
+                &quot;components&quot; based on coordinates, Maven first looks at the local repository, and if the local
+                repository exists, it is used directly; if the local repository does not exist, Or need to see if there
+                is a newer version, Maven will go to the remote repository to find, when found in the required&quot;
+                components &quot;, will be downloaded to the local repository and then use; if the final local
+                repository and remote repository can not find the the required &quot;component&quot;, Maven will be an
+                error.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <p>
+            &nbsp;
+        </p>
+    </div>
+
+    <div>
+        <div id="reference">
+            <p>
+                <em>Reference</em>
+            </p>
+
+            <p style="margin-left: 40px;">
+                &nbsp;&nbsp;<a href="https://maven.apache.org/" rel="nofollow" target="_blank">Apache&nbsp;Maven</a>
+            </p>
+
+            <p style="margin-left: 40px;">
+                &nbsp;&nbsp;<a
+                    href="https://www.amazon.com/Maven%E5%AE%9E%E6%88%98-%E8%AE%B8%E6%99%93%E6%96%8C/dp/B01EP93YK4/ref=sr_1_1?ie=UTF8&amp;qid=1494091456&amp;sr=8-1&amp;keywords=Maven%E5%AE%9E%E6%88%98"
+                    rel="nofollow" target="_blank">Maven实战</a>
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <p>
+            &nbsp;
+        </p>
+    </div>
+
+    <div>
+        <a href="https://www.peretang.com/basic-knowledge-of-maven/" style="font-style:oblique;color:grey"
+           target="_blank">Chinese version</a>
+    </div>
+</div>
+
+</body>
+</html>

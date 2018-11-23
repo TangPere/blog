@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <div style="visibility: hidden;">
+        basic-knowledge-of-maven
+    </div>
+
+    <div style="visibility: hidden;">
+        Maven基础介绍
+    </div>
+
+    <hr/>
+    <div id="introductionToMaven">
+        <h2>
+            Maven简介
+        </h2>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven , 用于Java项目的构建 , 依赖管理 , 项目信息管理的项目管理工具.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; 是Apache组织旗下的开源项目.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven核心功能是一个具有跨平台特性的构建工具 , 帮助我们自动化构建 , 并提供一个完整的优化的构建生命周期模型 , 和构建任务所需的基础组件/插件.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven还是一个依赖管理工具和项目信息管理工具 , 方便开发人员更好的管理依赖与避免项目信息混乱等问题.
+        </p>
+
+        <p style="margin-left: 40px;">
+            &nbsp; Maven还提供了一套标准的约定规则 , 减轻不同项目的差异性.
+        </p>
+
+        <p>
+            &nbsp;
+        </p>
+
+        <p>
+            &nbsp;
+        </p>
+    </div>
+
+    <div id="mavenFeatures">
+        <h2>
+            Maven特性
+        </h2>
+
+        <div id="mavenPromise">
+            <h3 style="margin-left: 40px;">
+                Maven标准约定规则
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven是一个约定优于配置的工具 , 只要遵守Maven的约定 , 那么只需要少量的配置 ,Maven就能帮助你完成你所需的大部分工作
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenBuilds">
+            <h3 style="margin-left: 40px;">
+                Maven构建
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven统一了以前项目构建时的阶段 , 提供了一个标准化的构建阶段模型:
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 1. validate (验证) : 验证项目的所有必要信息的正确性
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 2.&nbsp;initialize (初始化) : 初始化构建状态 , 例如设置属性或创建目录
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 3. generate-sources,process-sources (处理源文件) : 处理项目源文件
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 4. generate-resources,process-resources (处理资源文件) : 对资源文件进行处理 , 并将其复制到目标目录 , 等待打包
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 5.&nbsp;compile,process-classes (主代码编译) : 编译项目的主代码至目标文件夹
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 6. generate-test-sources,process-test-sources (处理测试源文件) : 对项目测试源文件进行处理
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 7.&nbsp;generate-test-resources,process-test-resources (处理测试资源文件) : 对项目测试资源文件进行处理 , 并将其复制到目标目录
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 8.&nbsp;test-compile,process-test-classes (测试代码编译) : 编译项目的测试源代码至目标文件夹
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 9. test (测试) : 使用项目定义的单元测试框架进行测试
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 10.&nbsp;prepare-package,package (打包) : 讲编译后的主代码打包成所需的格式&quot;软件包&quot;
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 11. pre-integration-test,integration-test,post-integration-test (集成测试) : 如需要 , 会将打包好的&quot;软件包&quot;部署到可以运行集成测试的环境中进行集成测试
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 12.&nbsp;verify (校验) : 运行定义的检查步骤以验证&quot;软件包&quot;是否有效 或 是否符合质量标准
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 13. install (安装) : 将&quot;软件包&quot;安装到本地仓库<sup>[1]</sup>中 , 以作为本地其他项目的依赖
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; 14. deploy (部署) : 将&quot;软件包&quot;发布到远程仓库<sup>[2]</sup>中 , 以供其他人使用与项目共享
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenManagement">
+            <h3 style="margin-left: 40px;">
+                Maven依赖管理与项目信息管理
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; 关于依赖管理方面 , 在目前这个年代 , 几乎每个Java应用都会有第三方的开源库依赖 , 若还是使用手工的方式管理会严重影响开发人员的效率 , 并会因为依赖增多的问题的增加更加复杂 ,
+                所幸Maven提供了优秀的解决方案 , 通过引入&quot;GroupId&quot;,&quot;ArtifactId&quot;,&quot;Version&quot;,&quot;type&quot;等元素为Java的依赖问题提供了一个坐标系统
+                , 从而帮助开发人员更好的管理项目.
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; 关于项目信息管理方面 , 当开发人员使用第三方开源库时 , 总会有需要查看文档 , 源代码等需求 , 在使用Maven之前 , 开发人员总需要去各大搜索引擎去查找这些信息 ,
+                但当引入Maven后 , 这些关于项目的信息 , 可以统一在POM文件<sup>[3]</sup>中声明 , 方便其他人的查找 , 与项目信息的统一管理.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenPOM">
+            <h3 style="margin-left: 40px;">
+                POM文件
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; POM文件是Maven的一大核心内容 , 其全称为&quot;Project Object Model&quot;即项目对象模型.<br/>
+                &nbsp; 其用于定义项目的基本信息 , 指定项目如何构建 , 声明项目依赖 ; POM文件提现了Maven的一大优点 , 即能让项目对象模型最大程度与项目代码等相独立 , 即把两者的关系进行了解耦.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenCoordinate">
+            <h3 style="margin-left: 40px;">
+                Maven坐标系统
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven构件 : 指的是平时项目打包完成后的的一些jar , war等文件.
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven坐标为各种构件引入了秩序 , 任何一个构件都必须明确定义自己的唯一坐标 ;&nbsp;而一组Maven坐标就是通过以下一组元素定义的 :
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; groupId : 定义当前Maven项目隶属的实际项目
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; artifactId : 定义实际项目中的一个Maven模块/项目&nbsp;, 推荐使用groupId作为artifactId的前缀
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; version : 定义Maven模块/项目所处的版本 , Maven定义了一套完整的版本规范
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; packaging : 定义Maven模块/项目的打包方式
+            </p>
+
+            <p style="margin-left: 120px;">
+                &nbsp; classifier : 帮助定义一些与主构件对应的附属构件
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; Maven仓库就是基于Maven的坐标系统
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <div id="mavenRepository">
+            <h3 style="margin-left: 40px;">
+                Maven仓库
+            </h3>
+
+            <p style="margin-left: 80px;">
+                &nbsp; 得益于Maven的坐标机制 , 任何Maven项目使用的任何一个&quot;构件&quot;的方式都是相同的 ;&nbsp;在此基础上 ,
+                Maven可以在某个位置统一储存所有Maven项目共享的&quot;构件&quot; , 这就是仓库 ; 因为仓库 , 所以Maven项目不再需要各自储存依赖的&quot;构件&quot; ,
+                转而只需声明这些依赖的坐标 , 在需要的时候 , Maven会自动根据坐标找到仓库中的&quot;构件&quot; , 并使用它们.
+            </p>
+
+            <p style="margin-left: 80px;">
+                &nbsp; 仓库的分类有两种 , 本地仓库与远程仓库 ; 当Maven根据坐标寻找&quot;构件&quot;的时候 , Maven会先查看本地仓库 , 如果本地仓库存在此构件 , 则直接使用 ;
+                如果本地仓库不存在此&quot;构件&quot; , 或需要查看是否有更新的版本 , Maven就会去远程仓库查找 , 当发现所需的&quot;构件&quot;后 , 就会下载到本地仓库后再使用 ;
+                如果最终本地仓库与远程仓库都无法找到所需要的&quot;构件&quot;时 , Maven就会报错.
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <p>
+            &nbsp;
+        </p>
+
+        <p>
+            &nbsp;
+        </p>
+    </div>
+
+    <div>
+        <div id="reference">
+            <p>
+                <em>参考</em>
+            </p>
+
+            <p style="margin-left: 40px;">
+                &nbsp;&nbsp;<a href="https://maven.apache.org/" rel="nofollow" target="_blank">Apache&nbsp;Maven</a>
+            </p>
+
+            <p style="margin-left: 40px;">
+                &nbsp;&nbsp;<a
+                    href="https://www.amazon.com/Maven%E5%AE%9E%E6%88%98-%E8%AE%B8%E6%99%93%E6%96%8C/dp/B01EP93YK4/ref=sr_1_1?ie=UTF8&amp;qid=1494091456&amp;sr=8-1&amp;keywords=Maven%E5%AE%9E%E6%88%98"
+                    rel="nofollow" target="_blank">Maven实战</a>
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+
+            <p>
+                &nbsp;
+            </p>
+        </div>
+
+        <p>
+            &nbsp;
+        </p>
+
+        <p>
+            &nbsp;
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

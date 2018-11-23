@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="visibility: hidden;">
+    Basic knowledge of Spring Framework
+</div>
+
+<div style="visibility: hidden;">
+    Spring框架基础知识
+</div>
+
+<hr/>
+<div id="introductionToSpringFramework">
+    <h2>
+        Spring框架简介
+    </h2>
+
+    <p style="margin-left: 40px;">
+        Spring , 一个开源的框架 , 由Rod Johnson创建. Spring是为了解决企业应用开发的复杂性而创建的 , 可以让简单的JavaBeans/POJO来实现之前只有EJB<sup>[1]</sup>才能完成的事情.
+        Spring还提供了大量API简化与其他第三方框架的集成.&nbsp;
+    </p>
+
+    <p style="margin-left: 40px;">
+        纵览Spring , 你会发现Spring可以解决非常多的问题 , 但归根到底 , 所有Spring提供的API/解决方案的理念都可以追溯到Spring最根本的理念上
+        &quot;<u><strong>简化Java开发</strong></u>&quot; .
+    </p>
+
+    <p style="margin-left: 40px;">
+        <strong>▲Spring=简化Java开发</strong>
+    </p>
+</div>
+<div id="SpringCore">
+    <h2>
+        Spring策略与核心
+    </h2>
+
+    <p style="margin-left: 40px;">
+        Spring为了降低Java开发复杂性的4大关键策略/核心
+    </p>
+
+    <p style="margin-left: 40px;">
+        1. 基于POJO的轻量级和最低侵入性编程
+    </p>
+
+    <p style="margin-left: 40px;">
+        2. 通过依赖注入和面向接口实现松耦合
+    </p>
+
+    <p style="margin-left: 40px;">
+        3. 基于切面和惯例进行声明式编程
+    </p>
+
+    <p style="margin-left: 40px;">
+        4. 通过切面和模版减少板式代码
+    </p>
+
+    <p style="margin-left: 40px;">
+        基本所有Spring的API/解决方案都可以追溯到上述的一条或多条策略中.&nbsp;
+    </p>
+</div>
+<div id="weaknessOfSpringFramework">
+    <h2>
+        Spring缺点
+    </h2>
+
+    <p style="margin-left: 40px;">
+        虽然Spring能降低复杂性 , 但是当Spring发展到现在4.X , Spring已然是一个很复杂的框架.&nbsp;
+    </p>
+
+    <p style="margin-left: 40px;">
+        另Spring的最初目标是一个轻量级的容器框架 , 但是发展到现在Spring4.X也已经是一个重量级框架.&nbsp;
+    </p>
+
+    <p style="margin-left: 40px;">
+        最后虽然Spring是最小的侵入性 , 但是它带给了我们最大的依耐性.&nbsp;
+    </p>
+</div>
+
+
+<div id="moduleOfSpringFramework">
+    <h2>
+        Spring模块
+    </h2>
+
+    <h3 style="margin-left: 40px;">
+        Core模块
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-core,spring-beans&nbsp;: 框架的最基础模块，其提供了IOC和依赖注入等功能
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-context&nbsp;: 提供了一种访问对象的上下文对象
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-context-support&nbsp;: 提供了将第三方库集成到上下文中的功能
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-expression(SPEL) : 提供了强大的表达式语言支持 , 减少工作量
+    </p>
+
+    <h3 style="margin-left: 40px;">
+        AOP模块
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-aop : 提供了一个符合AOP规范的面向切面的API实现
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-aspects : 提供了与AspectJ的集成
+    </p>
+
+    <h3 style="margin-left: 40px;">
+        数据访问集成
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-jdbc : 提供简化JDBC编程的API
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-tx : 提供简化事务管理和编程的API
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-orm : 提供简化ORM规范<sup>[2]</sup>编程的API , 并提供对JPA , Hibernate的支持
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-oxm : 提供简化OXM规范<sup>[3]</sup>编程的API
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-jms : 提供简化JMS规范<sup>[4]</sup>编程的API
+    </p>
+
+    <h3 style="margin-left: 40px;">
+        Web模块
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-web : 提供简化基本Web功能编程的API
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-webmvc,spring-webmvc-portlet : 提供简化MVC<sup>[5]</sup>和RESTful<sup>[6]</sup>编程的API
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-websocket : 提供简化Websocket编写的API
+    </p>
+
+    <h3 style="margin-left: 40px;">
+        测试模块
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-test : 提供对单元测试和集成测试支持的组件 , 简化测试用例编程的API
+    </p>
+
+    <h3 style="margin-left: 40px;">
+        信息模块
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-messaging :&nbsp;支持消息架构和协议
+    </p>
+
+    <h3 style="margin-left: 40px;">
+        设备模块
+    </h3>
+
+    <p style="margin-left: 80px;">
+        spring-instrument :&nbsp;提供了在某些应用服务器中使用的类检测支持和类加载器实现
+    </p>
+
+    <p style="margin-left: 80px;">
+        spring-instrument-tomcat :&nbsp;提供了在Tomcat中使用的类检测支持和类加载器实现
+    </p>
+</div>
+<div id="overviewOfSpringFramework">
+    <h3 style="margin-left: 40px;">
+        Spring架构图
+    </h3>
+
+    <p style="margin-left: 80px;">
+        <img alt="Spring-framework-overview"
+             src="https://www.peretang.com/wp-content/uploads/2017/04/Spring-framework-overview.png"
+             style="width: 720px; height: 540px;"/>
+    </p>
+</div>
+<p>
+    &nbsp;
+</p>
+
+<p>
+    &nbsp;
+</p>
+
+<div id="reference">
+    <p>
+        参考
+    </p>
+
+    <p style="margin-left: 40px;">
+        <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/" target="_blank"
+           rel="nofollow">Spring framework reference</a>
+    </p>
+
+    <p style="margin-left: 40px;">
+        <a href="https://www.amazon.com/Spring-Action-Covers-4/dp/161729120X/ref=sr_1_1?ie=UTF8&amp;qid=1493438100&amp;sr=8-1&amp;keywords=spring+in+action"
+           rel="nofollow">Spring In Action</a>
+    </p>
+</div>
+<div id="comment">
+    <p>
+        注释
+    </p>
+
+    <p style="margin-left: 40px;">
+        <sup>[1]</sup>这里的EJB指的是EJB2.X，因为从EJB3.X规范开始也可以使用POJO来实现EJB规范。
+    </p>
+
+    <p style="margin-left: 40px;">
+        <sup>[2]</sup>对象关系映射 , 用来把对象模型表示的对象映射到基于SQL的关系模型数据库结构中去.&nbsp;
+    </p>
+
+    <p style="margin-left: 40px;">
+        <sup>[3]</sup>Object XML Mapping&nbsp;,&nbsp;数据实体对象与XML节点之间的映射.
+    </p>
+
+    <p style="margin-left: 40px;">
+        <sup>[4]</sup>Java消息服务 , JavaEE规范中的一员 , 负责与信息中间件(MOM)进行交互的API. 参考 :&nbsp;<a
+            href="https://www.peretang.com/basic-knowledge-of-javaee-standard/" target="_blank">JAVAEE规范基础知识</a>
+    </p>
+
+    <p style="margin-left: 40px;">
+        <sup>[5]</sup>MVC是一种使用 MVC (Model View Controller 模型-视图-控制器) 设计创建 Web 应用程序的模式.&nbsp;
+    </p>
+
+    <p style="margin-left: 40px;">
+        <sup>[6]</sup>RESTful一种软件架构风格.&nbsp;
+    </p>
+</div>
+</body>
+</html>
